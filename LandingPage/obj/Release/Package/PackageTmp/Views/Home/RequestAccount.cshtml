@@ -1,0 +1,80 @@
+﻿@model LandingPage.Models.AccountRequest
+@{
+    ViewBag.Title = "RequestAccount";
+}
+
+<h2>Kontoförfrågan</h2>
+<h3 style="color:green;">@ViewBag.message</h3>
+<div class="col-md-5 col-md-offset-1">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+           
+            <div class="form-group">
+                @Html.LabelFor(model => model.Company, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.OrgNr, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.OrgNr, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Skicka" class="btn btn-default" />
+                </div>
+            </div>
+
+        </div>
+    }
+</div><div class="col-md-4">
+    <h3>Vill ni testa?</h3>
+    <h4>Fyll i era kontaktuppgifter för att testa marknadens bästa due diligence produkt.</h4>
+    <p>Vi har många som testar vår plattform för tillfället och intresset växer i snabb takt. Med jämna mellanrum välkomnar vi alltfler användare och ser fram emot att fortsätta utveckla vår plattform till er belåtenhet.</p>
+          <img src="~/Content/images/key.jpg" class="center-block" />
+    </div>
+<div class="col-md-10 col-md-offset-1">
+    <div class="well">
+        <h4>Kunderbjudande</h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="glyphicon glyphicon-ok pull-xs-right" style="color:green;"></span>
+                Våra kunders feedback tas på högsta allvar och kommer att tas tillvara på
+            </li>
+            <li class="list-group-item">
+                <span class="glyphicon glyphicon-ok pull-xs-right" style="color:green;"></span>
+                Vi vill hjälpa våra kunder att spara mer än 50% av sin tid vid projekt som berör due diligence
+            </li>
+            <li class="list-group-item">
+                <span class="glyphicon glyphicon-ok pull-xs-right" style="color:green;"></span>
+                Vi vill hjälpa våra kunder att minimera fel vid presentation av prognoser och bokslutsdata
+            </li>
+            <li class="list-group-item">
+                <span class="glyphicon glyphicon-ok pull-xs-right" style="color:green;"></span>
+                Vi vill hjälpa våra kunder att sluta behöva växla mellan Excel, Powerpoint och webbläsare
+            </li>
+        </ul>
+    </div>
+</div>
+

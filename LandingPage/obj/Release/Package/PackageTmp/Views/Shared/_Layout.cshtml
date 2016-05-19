@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.silvery,sleek.css" />
+
+    
+    <meta name="True North Business Intelligence" content="Marknadens effektivaste due-dilligence plattform." />
+</head>
+<body>
+    <div id="page">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <header class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div id="logo">
+                        <a href='@Url.Action("Index", "Home")'><img id="logo" src="~/Content/images/logga_tnbi_white.png" /></a>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav">@Html.ActionLink("Hem", "Index", "Home")</li>
+                        <li class="nav">@Html.ActionLink("Produkter", "Products", "Home")</li>
+                        <li class="nav">@Html.ActionLink("Kontoförfrågan", "RequestAccount", "Home")</li>
+                        <li class="nav">@Html.ActionLink("Om Oss", "About", "Home")</li>
+                        <li class="nav"><a href="https://app.tnbi.se">Inloggning</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+        <div class="container" style="background-color:#f5f5f5; margin-left:0; margin-right:0; width:100%; max-width:none;">
+            <div class="row" style="min-height:100px;">
+                <div class="col-md-12 text-center">
+                    <h3>Kontakta oss</h3>
+                </div>
+                <div class="col-md-12">
+
+                    <footer>
+                        <ul class="list-inline center-block text-center">
+                            <li><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@tnbi.se">info@tnbi.se</a></li>
+                            <li><span class="glyphicon glyphicon-home"></span> Vasagatan 19, 411 25 Göteborg</li>
+                            <li><span class="glyphicon glyphicon-earphone"></span> <a href="tel:+467000000">+46(0)763-097398</a></li>
+                            <li><a href="https://twitter.com/tnbi_se"><img src="~/Content/images/twitter_circle_color-256.png" style="height:17px; width:auto" />Twitter</a></li>
+                            <li>&copy; @DateTime.Now.Year - Big Data, Small Task</li>
+                            <li><a style="border: 0;" href='@Url.Action("Login", "Account")'><span class="glyphicon glyphicon-lock"></span></a></li>
+                        </ul>
+                        
+                        
+
+                    </footer>
+                   
+                </div>
+            </div>
+        </div>
+        @*<div class="navbar navbar-inverse" style="margin-bottom:0; height:77px; border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0;border:0;">
+        <div class="row">
+            <div class="col-md-4"><a href="#"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+            <div class="col-md-4 text-center">LOGGA IN</div>
+            <div class="col-md-4">FÖLJ OSS <span class="glyphicon glyphicon-thumbs-up">F</span> <span>L</span></div>
+        </div>
+    </div>*@
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/site.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
